@@ -6,7 +6,7 @@ public class T177_JOL1169_주사위던지기1 {
 	static int N, M;
 	static int[] arr;
 	static boolean[] visited;
-	static int[] cnt;
+
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -14,12 +14,10 @@ public class T177_JOL1169_주사위던지기1 {
 		M = sc.nextInt();
 		arr = new int[N + 1];
 		visited = new boolean[7];
-		cnt = new int[8];
 
 		if (M == 1) {
 			test1(0);
 		} else if (M == 2) {
-			cnt[1] = N;
 			test2(0,1);
 		} else {
 			test3(0);
@@ -62,14 +60,8 @@ public class T177_JOL1169_주사위던지기1 {
 		}
 
 		for (int i = start; i <= 6; i++) {
-			if (cnt[i] == 0) {
-				continue;
-			}
-			cnt[i]--;
-			cnt[i+1]++;
 			arr[num] = i;
 			test2(num + 1, i);
-			cnt[i]++;
 		}
 
 	}
