@@ -1,9 +1,11 @@
+package test08;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class T179_BOJ1120_문자열 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -46,3 +48,37 @@ public class Main {
 	}
 }
 
+//if(len==0) {
+//	for(int j=0; j < arr1.length; j++) {
+//		if(map[j] == arr2[j]) {
+//			min++;
+//		}
+//	}
+//} else {
+//	for(int i=0; i<=len; i++) {
+//		int a = 0;
+//		for(int j=0; j < arr2.length; j++) {
+//			if(map[j] != arr2[j]) {
+//				a++;
+//			}
+//		}
+//		for(int k=arr2.length-1; k>0; k--) {		// 한칸씩 이동
+//			map[k] = map[k-1];
+//		}
+//		map[i]=arr2[i];
+//		min = Math.min(min, a);	
+//	}
+//	for(int i=0; i<=len; i++) {
+//		int a = 0;
+//		for(int j=0; j < arr2.length; j++) {
+//			if(map[j] != arr2[j]) {
+//				a++;
+//			}
+//		}
+//		for(int k=0; k<arr2.length-1; k++) {		// 한칸씩 이동
+//			map[k] = map[k+1];
+//		}
+//		map[arr2.length-i-1]=arr2[arr2.length-i-1];
+//		min = Math.min(min, a);	
+//	}
+//}
