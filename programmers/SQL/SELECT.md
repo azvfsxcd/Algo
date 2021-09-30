@@ -54,7 +54,7 @@ FROM ANIMAL_INS
 ORDER BY NAME ASC, DATETIME DESC;
 ```
 
-# SELECT 7 - 상위 n개 레코드
+##### SELECT 7 - 상위 n개 레코드
 
 ```SQL
 SELECT NAME
