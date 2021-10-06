@@ -1,10 +1,10 @@
-##### 프로그래머스 SQL 코딩테스트 연습
+# 프로그래머스 SQL 코딩테스트 연습
 
 ### GOURP_BY
 
 ---
 
-# GOURP_BY 1 - 고양이와 개는 몇 마리 있을까
+##### GOURP_BY 1 - 고양이와 개는 몇 마리 있을까
 
 ```SQL
 SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) count
@@ -13,7 +13,7 @@ GROUP BY ANIMAL_TYPE
 ORDER BY ANIMAL_TYPE;
 ```
 
-# GOURP_BY 2 - 동명 동물 수 찾기
+##### GOURP_BY 2 - 동명 동물 수 찾기
 
 ```SQL
 SELECT NAME, COUNT(NAME) count
@@ -23,7 +23,7 @@ HAVING COUNT(NAME) > 1
 ORDER BY NAME;
 ```
 
-# GOURP_BY 3 - 입양 시각 구하기(1)
+##### GOURP_BY 3 - 입양 시각 구하기(1)
 
 ```SQL
 SELECT HOUR(DATETIME) HOUR, COUNT(HOUR(DATETIME)) COUNT
