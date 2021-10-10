@@ -34,3 +34,14 @@ ORDER BY HOUR(DATETIME);
 ```
 
 - GROUP BY 1 : 1열을 그룹화 (문제에선 HOUR(DATETIME), GOURP BY 2일 경우 COUNT(HOUR(DATETIME)))
+
+##### GOURP_BY 4 - 입양 시각 구하기(2)
+
+```SQL
+SET @hour := -1; -- 변수 선언
+
+SELECT (@hour := @hour + 1) as HOUR,
+(SELECT COUNT(*) FROM ANIMAL_OUTS WHERE HOUR(DATETIME) = @hour) as COUNT
+FROM ANIMAL_OUTS
+WHERE @hour < 23
+```
